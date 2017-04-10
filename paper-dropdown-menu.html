@@ -114,7 +114,7 @@ respectively.
           always-float-label="[[alwaysFloatLabel]]"
           no-label-float="[[noLabelFloat]]"
           label="[[label]]">
-          <iron-icon icon="paper-dropdown-menu:arrow-drop-down" suffix></iron-icon>
+          <iron-icon icon="[[icon]]" suffix></iron-icon>
         </paper-input>
       </div>
       <content id="content" select=".dropdown-content"></content>
@@ -268,7 +268,7 @@ respectively.
           dynamicAlign: {
             type: Boolean
           },
-            
+
           /**
            * Whether focus should be restored to the dropdown when the menu closes.
            */
@@ -276,6 +276,14 @@ respectively.
             type: Boolean,
             value: true
           },
+
+          /**
+           * Sets the icon of the dropdown. Defaults to arrow-drop-down.
+           */
+          icon: {
+            type: String,
+            value: 'paper-dropdown-menu:arrow-drop-down'
+          }
         },
 
         listeners: {
